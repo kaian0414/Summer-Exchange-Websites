@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Italy2019 - Project 2</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar">
+		<a href="index.html">International Summer School 2019 (Cesena)</a></li>
+		<div style="float: right;">
+			<a href="schedule.html">Schedule</a>
+			<a href="project1.html">Project1</a>
+			<a href="project2.html">Project2</a>
+			<a href="project3.html">Project3</a>
+			<a href="project4.html">Project4</a>
+			<a href="moments.html">Moments</a>
+		</div>
+	</div>
+	
+	<!-- project2 -->
+	<section class="content" style="padding-top: 100px; background-color: #fff;">
+		<!-- topic -->
+		<h2>Classroom Schedule</h2>
+		<img class="members" src="img/group2.jpg"/>
+		<h3>Advisors</h3>
+		<p style="color: black;">Prof. Giovanni Pau, Prof. Rita Tse, Dr, Silvia Mirri, Dr. Catia Prandi, Ms. Chiara Ceccarini, Mr. Lorenzo Monti</p>
+		<h3>Members</h3>
+		<p style="color: black;">Ka Ian Chan, Alice Chong</p>
+
+	</section>
+	
+	<!-- Introduction -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>1. Introduction</h3>
+			<p>Creating imageries to present data is one of the effective way to transmit information. This kind of visual aids can let receivers understand the information quickly. It is widely used in various disciplines, such as maps, statistics diagrams and trend charts.</p>
+		<h4>1.1 Overview</h4>
+			<p>An idea of this project is to build up a webpage to display the lectures and related classrooms in a timetable format. There are different kinds of existing libraries to establish the diagrams, such as D3.js and Chart.js, and both of them can also be used to visualize data. However, we did not use any one of them to finish this visualization demo as we would like to design a diagram with our own ideas which can let users have a nice browsing experience.</p>
+			<p>In this project, we built up a schedule page in a timetable format. The presented data is provided by the University of Bologna which includes the lectures, classroom and time information of a day. By fetching the data from the provided XML file, we can display it within our designed UI interface. As our goal is to let users notice the target lessons and related information clearly with a nice browsing experience, we paid more attention on the visual effects. We mainly chose to use fresh colour, rounded corners and one of the famous graceful font. This kind of design can let users feel more comfortable. </p>
+		<h4>1.2 Tools</h4>
+			<ul id="projectPoint">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>jQuery</li>
+				<li>XAMPP</li>
+			</ul>
+			</p>
+	</section>
+
+	<!-- Design and Implementation -->
+	<section class="content" style="background-color: #fff;">
+		<h3>2. Design and Implementation</h3>
+			<p>This chapter is going to provide details on the building process, analysis and design.</p>
+		<h4>2.1 Localhost Server</h4>
+			<p>Because of the Cross-Origin Resource Sharing policy (CORS), we must establish a localhost server. We chose to use a famous localhost server – XAMPP to start the Apache HTTP server to finish this project.</p>
+		<h4>2.2 Design</h4>
+			<p>The data is shown in a table format which the horizontal side is a timeline and the vertical side is names of the lessons. For the timeline, it was set from 09:00 to 20:00 according to the opening hour of the campus. In our opinion, it is not necessary to display all 24 hours on the page as it may affect the experience of visualizing and contain some redundant areas. For the names of the lessons, they are sorted by English alphabets which is better for users to notice their target information on the table.</p>
+			<img src="img/project2/p2_1.jpg"/ style="width: 80%;" class="projectImg">
+			<span class="projectImg">Figure 1 Sorting Data</span>
+			<p>As we are students, we know that we are familiar with the lessons (or courses) which we attend rather than which classrooms we are going to use. Since then, we designed the interface with the names of the lessons on the vertical side and the timeline on the horizontal side.</p>
+			<p>Here is the UI interface of our webpage.</p>
+			<img src="img/project2/p2_2.jpg"/ style="width: 80%;" class="projectImg">
+			<span class="projectImg">Figure 2 UI interface</span>
+		<h4>2.3 Fetching Data</h4>
+			<p>Extensible Makeup Language (XML) is a textual data format which is widely used for representing data structure. In this project, we were provided the data with XML format. We used AJAX to load the data XML file and some methods to get the data. Including find() method to returns descendant elements and children() method returns all direct children of the selected element.</p>
+			<img src="img/project2/p2_3.jpg"/ style="width: 25%;" class="projectImg">
+			<span class="projectImg">Figure 3 Loading the XML file</span>
+			<img src="img/project2/p2_4.jpg"/ style="width: 60%;" class="projectImg">
+			<span class="projectImg">Figure 4 Fetching Data</span>
+		<h4>2.4 Displaying Data</h4>
+			<p>After using the methods to select elements, we use for-loop to traverse the data one by one. It is used to create tag elements and show the data in the corresponding position. To avoid displaying the same data more than once, we have checked the data during the conversation. An array list is created to store the distinct data. Once when the name of the lesson, classroom and start time have already existed, that data will not push in the array list. Thus, we can guarantee the data will only appear once even if it existed in the XML for many times.</p>
+			<img src="img/project2/p2_5.jpg"/ style="width: 80%;" class="projectImg">
+			<span class="projectImg">Figure 5 Checking Repeated Data</span>
+			<p>Bar lines are used to show the duration of the lessons. Two variables are used to indicate the starting point and the ending point of it. In the XML file, the time is stored as a digital 24-hour clock format, which is containing a colon (:), so it cannot be used to do the calculation directly. Hence, we used the substring() method to extract the useful part and transform it as suitable data to generate the bar line.</p>
+			<img src="img/project2/p2_6.jpg"/ style="width: 80%;" class="projectImg">
+			<span class="projectImg">Figure 6 Traversing Data and Calculating the Bar Line</span>
+	</section>
+
+	<!-- Results and Discussion -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>3. Results and Discussion</h3>
+			<p>In this project, the outcome of this project is shown. We have already finished a demo of visualizing the necessary data in the schedule table and provided a nice UI interface to present the data. It is clear enough for users to notice the information.</p>
+			<p>On this webpage, the basic functions are completed.</p>
+			<ul id="projectPoint">
+				<li>Getting data from an XML file</li>
+				<li>Filtering the redundant data</li>
+				<li>Sorting</li>
+				<li>Displaying data</li>
+			</ul>
+			<a href="project2demo/index.html" class="specialOnClick">>>> Try Demo</a>
+	</section>
+
+	<!-- Conclusion and Futher work -->
+	<section class="content" style="background-color: #fff;">
+		<h3>4. Conclusion and Futher work</h3>
+			<p>The conclusion of our work will be shown here. As this is a short-term project which is not contained many functions, the further extension plan will also be discussed in this chapter.</p>
+		<h4>4.1 Conclusion</h4>
+			<p>This project aims to apply visualization into presenting data. We established a webpage for visualizing lessons and classrooms schedule. All lessons are sorted by their names and this design is useful for users to check information from the table. Meanwhile, it contains bar lines to illustrate the time duration instead of the digital time format. The interrelated name of the classrooms, including the types, are shown on the bar lines. It is more convenient to let users realize the information. The basic functions of the webpage are done, such as getting data from an XML file, filtering the redundant data, sorting and displaying them in the right position.</p>
+		<h4>4.2 Further Work</h4>
+			<p>Since we only finish a demo in this project, the visualized data is based on a specific XML file and built within the localhost server, for the future extension, we would like to support date selection to check the information in various date. Besides, we also want to provide some common categories for filtering data displaying on the webpage. It should be more user-friendly for every user. In addition, in recent years, many websites or applications provide the customizing colour interface and night sight mode. We prefer to install these function into this webpage.</p>
+	</section>
+
+	<!-- Reflection -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>5. Reflection</h3>
+			<p>In this period, we went forward in various ways on data visualization. No matter the studied areas are applied in our project or not, it is still a good experience of exploring new knowledge. Knowing how to learn by ourselves and how to practice knowledge. In the very beginning, we would like to use Python Django framework to build up the visualization project. Because of the low popularizing rate of it, we changed our ideas into JavaScript  and its library jQuery. We also did some researches on the libraries D3.js and Chart.js which are famous on data visualization. However, since we did not have enough experiences on JavaScript , the process did not go smoothly. We met different kinds of problems, encoding errors and so on. Especially on fetching XML data, we got into the CORS issues. It could not be solved by using the suggested ways online and wasted plenty of time on it. Fortunately, after our persevere and work hard, we solved all the problems again and again. Eventually, we can output the demo schedule table under our control. After the duration of completing this project, we are more familiar with JavaScript and its libraries and strengthen our programming concepts.</p>
+	</section>
+
+	<!-- Reference -->
+	<section class="content" style="background-color: #fff;">
+		<h3>6. Reference</h3>
+		<ul id="projectPoint">
+			<li><a href="https://www.w3schools.com/js/">W3School - js</a></li>
+			<li><a href="https://www.w3schools.com/jquery/">W3School - jQuery</a></li>
+			<li><a href="https://www.w3schools.com/css/">W3School - CSS</a></li>
+			<li><a href="https://coursesweb.net/jquery/jquery-xml">jQuery get XML data</a></li>
+			<li><a href="http://140.128.71.4/peterju/xml.html">XML Note</a></li>
+			<li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+			<li><a href="https://tobiasahlin.com/blog/introduction-to-chartjs/">Chart.js</a></li>
+			<li><a href="https://material.io/">Material Design</a></li>
+		</ul>
+	</section>
+	
+	<!-- Footer -->
+	<section id="footer">
+		Copyright &copy; Macao Polytechnic Institute
+	</section>
+
+</body>
+</html>

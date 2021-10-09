@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Italy2019 - Moments</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	
+	<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+	
+	<style>
+		.mySlides {display:none;}
+	</style>
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar">
+		<a href="index.html">International Summer School 2019 (Cesena)</a></li>
+		<div style="float: right;">
+			<a href="schedule.html">Schedule</a>
+			<a href="project1.html">Project1</a>
+			<a href="project2.html">Project2</a>
+			<a href="project3.html">Project3</a>
+			<a href="project4.html">Project4</a>
+			<a href="moments.html">Moments</a>
+		</div>
+	</div>
+	
+	<section class="content" style="padding-top: 100px; background-color: #fff;">
+		<h2>Moments</h2>
+		<p>Beside the lectures and labs in campus, we also travelled to some famous cities according to the summer school schedule. We had a walk there and visited some museums. In our spare time, we also went sightseeing in the city we lived - Cesena. We enjoyed the beautiful sceneries, tried the local food there and understand the western culture.</p>
+		<p>Here are some photos we took at that time.</p>
+	</section>
+	
+	<section class="content" >
+	<center style="margin:0; padding:0;">
+	<div id="container" style="margin:0; padding:0;">
+		<ul style="margin:0; padding:0;" class="wordsOnImg">
+			<li>
+				<img src="img/moments/1.jpg" width="604" height="453" />
+				<div class="bottom-right">Our Name Badge</div>
+			</li>
+			<li>
+				<img src="img/moments/2.jpg" width="604" height="453" />
+				<div class="bottom-right">Campus</div>
+			</li>
+			<li>
+				<img src="img/moments/3.jpg" width="604" height="453" />
+				<div class="bottom-right">Campus</div>
+			</li>
+			<li>
+				<img src="img/moments/4.jpg" width="604" height="453" />
+				<div class="bottom-right">Lunch in the Campus Garden</div>
+			</li>
+			<li>
+				<img src="img/moments/5.jpg" width="604" height="453" />
+				<div class="bottom-right">Campus Cafeteria</div>
+			</li>
+			<li>
+				<img src="img/moments/6.jpg" width="604" height="453" />
+				<div class="bottom-right">Piazza del Popolo (Cesena)</div>
+			</li>
+			<li>
+				<img src="img/moments/7.jpg" width="604" height="453" />
+				<div class="bottom-right">Cesena</div>
+			</li>
+			<li>
+				<img src="img/moments/8.jpg" width="604" height="453" />
+				<div class="bottom-right">Cesena</div>
+			</li>
+			<li>
+				<img src="img/moments/9.jpg" width="604" height="453" />
+				<div class="bottom-right">Cesena</div>
+			</li>
+			<li>
+				<img src="img/moments/10.jpg" width="604" height="453" />
+				<div class="bottom-right">Biblioteca Malatestiana (Cesena)</div>
+			</li>
+			<li>
+				<img src="img/moments/11.jpg" width="604" height="453" />
+				<div class="bottom-right">Our Trip</div>
+			</li>
+			<li>
+				<img src="img/moments/12.jpg" width="604" height="453" />
+				<div class="bottom-right">Duomo di Milano</div>
+			</li>
+			<li>
+				<img src="img/moments/13.jpg" width="604" height="453" />
+				<div class="bottom-right">Venice</div>
+			</li>
+			<li>
+				<img src="img/moments/14.jpg" width="604" height="453" />
+				<div class="bottom-right">Venice</div>
+			</li>
+			<li>
+				<img src="img/moments/15.jpg" width="604" height="453" />
+				<div class="bottom-right">Lunch in Bologna</div>
+			</li>
+			<li>
+				<img src="img/moments/16.jpg" width="604" height="453" />
+				<div class="bottom-right">Museo Marconi</div>
+			</li>
+			<li>
+				<img src="img/moments/17.jpg" width="604" height="453" />
+				<div class="bottom-right">Farewell Dinner</div>
+			</li>
+			<li>
+				<img src="img/moments/18.jpg" width="604" height="453" />
+				<div class="bottom-right">Museo Casa Enzo Ferrari (Modena)</div>
+			</li>
+			<li>
+				<img src="img/moments/19.jpg" width="604" height="453" />
+				<div class="bottom-right">Museo Casa Enzo Ferrari (Modena)</div>
+			</li>
+			<li>
+				<img src="img/moments/20.jpg" width="604" height="453" />
+				<div class="bottom-right">Cappuccino</div>
+			</li>
+			<li>
+				<img src="img/moments/21.jpg" width="604" height="453" />
+				<div class="bottom-right">Italy ice-cream</div>
+			</li>
+			<li>
+				<img src="img/moments/22.jpg" width="604" height="453" />
+				<div class="bottom-right">Breakfast</div>
+			</li>
+			<li>
+				<img src="img/moments/23.jpg" width="604" height="453" />
+				<div class="bottom-right">Delicious Meal</div>
+			</li>
+		</ul>
+			<span class="button prevButton"></span>
+			<span class="button nextButton"></span>
+	</div>
+	</center>
+	</section>
+	
+	<!-- Footer -->
+	<section id="footer">
+		Copyright &copy; Macao Polytechnic Institute
+	</section>
+	
+	
+
+<script src="jquery-1.4.2.min.js"></script>
+
+<script>
+$(window).load(function(){
+		var pages = $('#container li'), current=0;
+		var currentPage,nextPage;
+
+		$('#container .button').click(function(){
+			currentPage= pages.eq(current);
+			if($(this).hasClass('prevButton'))
+			{
+
+				if (current <= 0)
+					current=pages.length-1;
+				else
+					current=current-1;
+			}
+			else
+			{
+				if (current >= pages.length-1)
+					current=0;
+				else
+					current=current+1;
+			}
+			nextPage = pages.eq(current);	
+			currentPage.hide();	
+			nextPage.show();		
+		});
+});
+
+</script>
+
+
+</body>
+</html>

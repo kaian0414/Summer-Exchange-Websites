@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Italy2019 - Project 4</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar">
+		<a href="index.html">International Summer School 2019 (Cesena)</a></li>
+		<div style="float: right;">
+			<a href="schedule.html">Schedule</a>
+			<a href="project1.html">Project1</a>
+			<a href="project2.html">Project2</a>
+			<a href="project3.html">Project3</a>
+			<a href="project4.html">Project4</a>
+			<a href="moments.html">Moments</a>
+		</div>
+	</div>
+	
+	<!-- project4 -->
+	<section class="content" style="padding-top: 100px; background-color: #fff;">
+		<!-- topic -->
+		<h2>Campus Indoor Navigation</h2>
+		<img class="members" src="img/group4.jpg"/>
+		<h3>Advisors</h3>
+		<p style="color: black;">Dr. Giovanni Pau, Prof. Rita Tse, Mr. Lorenzo Monti</p>
+		<h3>Members</h3>
+		<p style="color: black;">Fitbi Hoi, Joe Wong</p>
+	</section>
+	
+	<!-- introduction -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>1. Introduction</h3>
+			<p>This project is to designing/developing an app to support wayfinding based on ebeacons inside the campus, considering personalized paths. And the areas invoke Wayfinding, Personalization, Indoor localization, etc. The technologies includes Web map of the Cesena campus (SVG based), eBeacons indoor positioning. Web and Mobile application development.</p>
+		<h4>1.1 Background</h4>
+			<p>Indoor positioning is the first issue to consider when developing indoor navigation. Nowadays, there are many ways or technologies to achieve indoor positioning. For example: Wi-Fi, FRID, Ultrasound, etc. Also, the eBeacon provides indoor positioning as well.</p>
+			<p>eBeacon is based on Bluetooth low energy proximity sensing by transmitting a universally unique identifier picked up by a compatible app or operating system. The identifier and several bytes sent with it can be used to determine the device's physical location, track customers, or trigger a location-based action on the device such as a check-in on social media or a push notification.</p>
+			<p>Indoor navigation provides current location of the user which allow users to know where they are. Also, users can navigate point-to-point from a startpoint to an endpoint. For example, a freshman wants to know the direction to pavilion. Indoor navigation is able to provide the direction from the current location to pavilion.</p>
+		<h4>1.2 Objectives and Main Tasks</h4>
+			<p>In this project, we should provide the indoor navigation and positioning inside the campus to users.</p>
+			<p>There are several main tasks that need to be due with. They are reconstructing code of the SVG map, create paths(roads) of SVG map, implement both of web-based and android app application. In addition, integration and testing.</p>
+	</section>
+
+	<!-- <img src="project1/p1_1.jpg"/ style="width: 40%;" class="projectImg">
+	<span class="projectImg">Figure 1 User inferface of the application</span> -->
+
+
+	<!-- Design and Implementation -->
+	<section class="content" style="background-color: #fff;">
+		<h3>2. Design and Implementation</h3>
+		<h4>2.1 System Design</h4>
+			<p>We developed a web application which provides indoor navigation on the campus' map. Also, we developed an android application to display the web app and commutation with the eBeacon. Therefore, users are able to find the direction to anywhere inside the campus.</p>
+			<img src="img/project4/p4_1.jpg"/ style="width: 80%;" class="projectImg">
+			<span class="projectImg">Figure 1</span>
+		<h4>2.2 SVG Maps Reconstruction</h4>
+			<p>First of all, we need to reconstruct code of the SVG map that provided by Universal of Bologna. It is because there are lack of construction in the original SVG map. Therefore in order to make function of point-to-point navigation work. The need of reconstruction is necessary. As you see, it is hard to figure out the relationship between these code. So, we have to reorganize them in order to make it readable and easy for us organize future work.</p>
+			<img src="img/project4/p4_2.jpg"/ style="width: 60%;" class="projectImg">
+			<span class="projectImg">Figure 2</span>
+			<p>The below pictures shows highline part of the SVG maps after edited.</p>
+			<img src="img/project4/p4_3.jpg"/ style="width: 30%;" class="projectImg">
+			<span class="projectImg">Figure 3</span>
+			<p>In each classroom or laboratory we give an HTML <a> tag with unit id. It is able to make those rooms clickable. Also, we classified the map into 6 group. And each group provided a unit id for specify what they are. They are base, toilet, rooms, doors, paths as well as portals respectively. For the group of base includes many of useless elements such as indoor green belts. The group of paths includes roads connected with all rooms. Also, the group of portals consists of all of stairs.</p>
+		<h4>2.3 Create Paths (Roads) of SVG Maps</h4>
+			<p>In this tasks, we have to draw roads on the SVG maps through adobe illustrator. Also, a door should be written on each classroom or laboratory which can provide an endpoint for the navigate function. The below picture shows the edited SVG map with partial roads.</p>
+			<img src="img/project4/p4_4.jpg"/ style="width: 60%;" class="projectImg">
+			<span class="projectImg">Figure 4</span>
+		<h4>2.4 Web and Android App Implementation</h4>
+			<p>In addition, we have to implement both of web and android application. The Web app is developed using HTML, CSS and JavaScript. The android app is based on Java. The web app is able to display the maps and allow users to click on each room. After that, there will be a shortest road to destination displayed on the map. However, there are some technical reasons that make the connectivity with eBeacon failure. Therefore, we need to develop the android app to connect with eBeacon in order to implement the indoor positioning function.</p>
+		<h4>2.5 Integration and Testing</h4>
+		<p>Finally, we have to intergrade the web and android application. The web app aims to provide indoor navigation and display the map. Besides, the android app is able to display the web app and connect with eBeacon to getting users' current location</p>
+		<img src="img/project4/p4_5.jpg"/ style="width: 30%;" class="projectImg">
+		<span class="projectImg">Figure 5</span>
+	</section>
+
+	<!-- Results and Discussion -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>3. Difficulties</h3>
+			<p>Throughout the project, we had ran into various difficulties. Most of them could be easily solved by changing the design of the interface or the code written. However, there were several problems we encountered which can only be solved by proposing a different design and implementation. A few of them have been listed below.</p>
+		<h4>3.1	The given SVG Maps contain repetitive CSS class names</h4>
+			<p>We discover the issue when we attempt to implement wayfinding API to multiple floor after reconstruct the code of the SVG maps. The web application display the SVG maps in a different color compared to its original. This problem occurs as the SVG maps contain the same CSS class names which cause the error. At last, we need to change the class names of each SVG map to a unique name in order to solve the problem. The below picture shows that error maps and those rooms are not clickable.</p>
+			<img src="img/project4/p4_6.jpg"/ style="width: 60%;" class="projectImg">
+			<span class="projectImg">Figure 6</span>
+		<h4>3.2	Failure to Implement Web Bluetooth API for Detection of eBeacon</h4>
+			<p>At the early stages of the project we attempt to perform the detection of eBeacon by web Bluetooth API in a web application. But unfortunately, we discover that the API cannot retrieve the unique ID of the eBeacon. This is a big issue as we could not identify the beacon the application connect to if there exists a beacons with the same device name. Furthermore, the API couldn't retrieve the RSSI value from the beacon which identifies the nearest beacon for finding the user location. As a result, we decided to create an android application and display the web on the application using Webview. This method enables the application to retrieve the unique ID and the RSSI value of the eBeacon from user'’'s smartphone. Then the application can notify the user about its indoor location through the SVG map.</p>
+			<img src="img/project4/p4_7.jpg"/ style="width: 60%;" class="projectImg">
+			<span class="projectImg">Figure 7</span>
+		<h4>3.3	Communication between the Web and the Android Application</h4>
+			<p>After we created the android application to detect the nearest beacon and the web application, we attempt to merge both application. By the implementation of webview on the android application, we were able to display the web on the android application. However, we discovered that java functions of the android couldn't be invoked directly by the web. As a result, we created a Java class named "JavaScriptInterface" on the android application and apply the class to the webview. This java class contains functions that needed to be involved by the web to detect the nearest eBeacon. By the implementation of the java class, it enables the web to communicate with the android application by invoke java function through the web JavaScript.</p>
+	</section>
+
+	<!-- Conclusion and Futher work -->
+	<section class="content" style="background-color: #fff;">
+		<h3>4. Conclusion and Futher work</h3>
+			<p>In conclusion, we have successfully design an android application to support wayfinding based on beacons inside the campus, considering personalized paths. In the future, we may implement functions that display each room information include collected data from different sensors, provides AR (augmented reality) for the indoor navigation to the users as an improvement of the project.</p>
+	</section>
+
+	<!-- Reference -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>5. Reference</h3>
+		<ul id="projectPoint">
+			<li><a href="https://en.wikipedia.org/wiki/IBeacon">Wikipedia. "IBeacon"</a></li>
+		</ul>
+	</section>
+	<!-- Footer -->
+	<section id="footer">
+		Copyright &copy; Macao Polytechnic Institute
+	</section>
+
+</body>
+</html>

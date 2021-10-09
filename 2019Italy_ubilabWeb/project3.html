@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Italy2019 - Project 3</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar">
+		<a href="index.html">International Summer School 2019 (Cesena)</a></li>
+		<div style="float: right;">
+			<a href="schedule.html">Schedule</a>
+			<a href="project1.html">Project1</a>
+			<a href="project2.html">Project2</a>
+			<a href="project3.html">Project3</a>
+			<a href="project4.html">Project4</a>
+			<a href="moments.html">Moments</a>
+		</div>
+	</div>
+	
+	<!-- project3 -->
+	<section class="content" style="padding-top: 100px; background-color: #fff;">
+		<!-- topic -->
+		<h2>PM Prophet</h2>
+		<img class="members" src="img/group3.jpg"/>
+		<h3>Advisors</h3>
+		<p style="color: black;">Prof. Giovanni Pau, Prof. Rita Tse, Prof. Silvia Mirri</p>
+		<h3>Members</h3>
+		<p style="color: black;">Derek Dong, Ferdinand Yang</p>
+
+	</section>
+	
+	<!-- introduction -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>1. Introduction</h3>
+		<h4>1.1 Project description</h4>
+			<p>Designing/Developing an AI application to predict PM and CO2 values and other environmental data (temperature, relative humidity, etc.), on the basis of values recorded through a CanarinII sensor outside the campus area.</p>
+		<h4>1.2 Related work</h4>
+			<p>Data prediction, Sensors</p>
+		<h4>1.2 Objectives and Main Tasks</h4>
+			<p>Using different kinds of algorithms to build prediction models.</p>
+			<p>Showing results of comparisons between true values and prediction values by data visualization.</p>
+	</section>
+
+	<!-- <img src="project1/p1_1.jpg"/ style="width: 40%;" class="projectImg">
+	<span class="projectImg">Figure 1 User inferface of the application</span> -->
+
+
+	<!-- Design and Implementation -->
+	<section class="content" style="background-color: #fff;">
+		<h3>2. Design and Implementation</h3>
+		<h4>2.1 Data Pre-processing</h4>
+			<p>Obtain data from the sensors and store data as csv data format. Due to certain data lost, delete blank columns and data which lack certain values. Next, Separate data to two parts (test data and train data) according to different values of the Node.</p>
+		<h4>2.2 Prediction Models</h4>
+			<p>There are four different prediction models.</p>
+			<h5>2.2.1 Linear Regression</h5>
+			<p>First, Find out correlation values between predicted factor and other factors. Next, Select strong interpretation from correlation values. Also, use OLS (ordinary least squares) to inspect whether the model is least risked by overfitting. Then, using train data to train the model. Finally, Get prediction value.</p>
+			<h5>2.2.2 KNN(K-Nearest Neighbor)</h5>
+			<p>First, Set neighbor parameters. Secondly, importing these parameters to establish the model by using these functions, KNeighborsRegressor and GridSearchCV. Thirdly, using train data to train the model. Fourthly, get prediction values and rms which is used to inspect the accuracy of the prediction values.</p>
+			<h5>2.2.3 Random Forest</h5>
+			<p>Invoke the function, GridSearchCV, to build up prediction models. There're five important parameters in this function. So, to get accurate prediction values, five best parameters should be found. What's more, invoke the function, RandomForestClassifer, to show the result.</p>
+			<h5>2.2.4 LSMT</h5>
+			<p>Set up the first layer neural network which has fifty units. Furthermore, add another layer neural network above it. Then, using train data to train the model. Finally, get the prediction values.</p>
+		<h4>2.3	Set up the website and data visualization</h4>
+			<p>Use Django frameworks to establish a website</p>
+			<p>Invoke the demo from HighChats and import prediction values and test data to the demo.</p>
+	</section>
+
+	<!-- Results and Discussion -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>3. Results and Discussion</h3>
+		<p>Website:</p>
+		<img src="img/project3/p3_1.jpg"/ style="width: 80%;" class="projectImg">
+		<span class="projectImg">Figure 1</span>
+		<p>Data visualization (use PM1.0 as an example):</p>
+		<p>Linear Regression</p>
+		<img src="img/project3/p3_2.jpg"/ style="width: 80%;" class="projectImg">
+		<span class="projectImg">Figure 2</span>
+		<p>KNN</p>
+		<img src="img/project3/p3_3.jpg"/ style="width: 80%;" class="projectImg">
+		<span class="projectImg">Figure 3</span>
+	</section>
+
+	<!-- Conclusion and Futher work -->
+	<section class="content" style="background-color: #fff;">
+		<h3>4. Conclusion and Futher work</h3>
+		<h4>4.1 Liner Regression and KNN</h4>
+			<p>Advantages: It is simple and it can reduce overfitting</p>
+			<p>Disadvantages: It may cause under-fitting and only models relationships between dependent and independent variables that are linear</p>
+		<h4>4.2 Random Forest</h4>
+			<p>Advantages: It’s an ensemble method in which a classifier is constructed by combining several different Independent base classifiers. Also, it is the best split feature from a random subset of available features.</p>
+			<p>Disadvantages: it is too complex which may cause much time-consuming. What's more, 'the best parameters' can be gotten under the previous situation. So, it may be not the best parameters.</p>
+	</section>
+
+	<!-- Reflection -->
+	<section class="content" style="background-color: #d3d3d347;">
+		<h3>5. Experience</h3>
+			<p>According to this project, we have learnt about the knowledge of machine learning. From the knowledge, we have learnt four different ways to build up prediction models and other algorithms. Furthermore, we have leant advantages and disadvantages of different prediction models. Therefore, when we predict other elements next time, we can use the most suitable model according to the situation.</p>
+	</section>
+
+	<!-- Reference -->
+	<section class="content" style="background-color: #fff;">
+		<h3>6. Reference</h3>
+		<ul id="projectPoint">
+			<li><a href="https://www.tensorflow.org/">Tensorflow Offical Website</a></li>
+			<li><a href="https://blog.csdn.net/qq_16633405/article/details/61200502">Random Forest, 3 Oct. 2017</a></li>
+			<li><a href="https://www.highcharts.com/demo">HighChats official website</a></li>
+			<li><a href="https://github.com/amcquistan/WeatherPredictPythonML/">Amcquistan, Using Machine Learning to Predict the Weather: Part 2"</a></li>
+		</ul>
+	</section>
+	<!-- Footer -->
+	<section id="footer">
+		Copyright &copy; Macao Polytechnic Institute
+	</section>
+
+</body>
+</html>

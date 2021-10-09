@@ -1,0 +1,365 @@
+/*Font Family*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap');
+
+/*Default*/
+html, body {
+	font-family: Calibri, Arial;
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	float: right;
+	width: 20%;
+	padding: 100px;
+}
+
+.content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+/* navigation start */
+.navbar {
+	overflow: hidden;
+	font-family: 'Josefin Sans', Calibri, Arial;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 8px 15px 8px 15px;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.navbar a:hover {
+	background: #ddd;
+	color: black;
+}
+
+#icon {
+	float: left;
+}
+
+#nav {
+	float: left;
+}
+/* navigation end */
+
+/* bg */
+#bg {
+	background-image: url('img/bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 800px;
+}
+
+#bgText {
+	position: absolute;
+	font-family: 'Permanent Marker', Calibri, Arial;
+	font-size: 30px;
+	z-index: 1;
+	color: white;
+	left: 60%;
+	bottom: 25%;
+	text-shadow: grey 0.2em 0.2em 0.2em;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: grey;
+	line-height: 2em;
+	text-align: left;
+}
+
+h2 {
+	font-family: 'Josefin Sans', Calibri, Arial;
+	text-align: center;
+}
+
+h3 {
+	font-family: 'Josefin Sans', Calibri, Arial;
+	text-decoration: underline;
+}
+
+/*point*/
+#point a {
+	color: grey; /* del hyperlink color */
+	display: block; /* <a> fill-in <li> */
+	text-decoration: none; /* del hyperlink underline*/
+}
+
+/*#point ul {
+	list-style: none; /* del item symbol */
+}
+*/
+#point ul {
+	color: grey;
+}
+#point ul li {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: grey;
+}
+
+#point ul li a {
+	transition: all .2s ease-in-out;
+}
+
+#point ul li a:hover {
+	transform: scale(1.1);
+	background-image: linear-gradient(to right, #ff2f8b, #9035f9);
+	color: transparent;
+	-webkit-background-clip: text;
+}
+/*point end*/
+
+/*#presentationImg {
+	width: 200px;
+	padding: 3px;
+}*/
+
+.project {
+	padding: 200px;
+}
+
+.projectImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#projectPoint li {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: grey;
+}
+
+.members {
+	float: right;
+	height: auto;
+	width: 300px;
+}
+
+.specialOnClick {
+	font-family: 'Josefin Sans', Calibri, Arial;
+	font-size: 20px;
+	color: blue;
+	text-decoration: none;
+}
+
+.specialOnClick:hover{
+	display: inline-block;
+	background-image: linear-gradient(to right, #ff2f8b, #9035f9);
+	color: transparent;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+}
+
+#footer {
+	font-family: 'Josefin Sans', Calibri, Arial;
+	left: 0;
+	bottom: 0;
+	width: auto;
+	padding: 15px;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+
+/*moments page start */
+
+#container{
+	width: 700px;
+	height: auto;
+	position: relative;
+}
+
+#container .prevButton{
+	height: 72px;
+	width: 68px;
+	position: absolute;
+	background: url('img/buttons.png') no-repeat;
+	top: 50%;
+	margin-top: -36px;
+	cursor: pointer;
+	z-index: 2000;
+	background-position: left top;
+	left: 0
+}
+
+#container .prevButton:hover{
+	background-position: left bottom;
+	left: 0;
+}
+
+#container .nextButton{
+	height: 72px;
+	width: 68px;
+	position: absolute;
+	background: url('img/buttons.png') no-repeat;
+	top: 50%;
+	margin-top: -36px;
+	cursor: pointer;
+	z-index: 2000;
+	background-position: right top;
+	right: 0
+}
+
+#container .nextButton:hover{
+	background-position: right bottom;
+	right: 0;
+}
+
+#container ul{
+	width: 604px;
+	height: 453px;
+	list-style: none outside none;
+	position: relative;
+	overflow: hidden;
+}
+
+#container li:first-child{
+	display: list-item;
+	position: absolute;
+}
+
+#container li{
+	position: absolute;
+	display: none;
+}
+
+/*moments page end*/
+
+/*words on images*/
+.wordsOnImg {
+	position: relative;
+	text-align: center;
+	color: black;
+	width: device-width;
+	initial-scale: 1;
+}
+
+.bottom-right {
+	position: absolute;
+	bottom: 10px;
+	right: 16px;
+	background: white;
+	padding: 10px;
+	opacity: 0.8;
+	font-family: 'Josefin Sans', Calibri, Arial;
+}
+
+/*schedule*/
+
+.schedule {
+	max-width: 90%;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+table {
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 0;
+	width: 100%;
+	align-self: center;
+	table-layout: fixed;
+	box-sizing: border-box;
+	/*box-shadow: 0 75px 125px -57px #7e8f94;*/
+	font-size: 17px;
+}
+
+#timetable td, #timetable th {
+	border: 0.5px solid #efe9e9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: auto;
+}
+
+/* table round */
+/* top left */
+#timetable tr:first-child th:first-child{
+	border-top-left-radius: 12px;
+}
+/* bottom left */
+#timetable tr:last-child td:first-child{
+	border-bottom-left-radius: 12px;
+}
+/* top right */
+#timetable tr:first-child th:last-child{
+	border-top-right-radius: 12px;
+}
+/* bottom right */
+#timetable tr:last-child td:last-child{
+	border-bottom-right-radius: 12px;
+}
+
+/*rows color*/
+#timetable tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#timetable tr:nth-child(odd){
+	background-color: #fff;
+}
+
+/* top row */
+#timetable th {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #1976d2;
+	color: white;
+}
+
+/* my time */
+#lunch {
+	background: lightyellow;
+}
+
+#free {
+	/*background: #12fdce;*/
+	background: #c0ffee;
+}
+
+#lecture {
+	background: #d1acf3;
+}
+
+#event {
+	background: #fee3c2;
+}
+
+#lab {
+	background: #ffccff;
+}
+
+#trip {
+	background: #94e5ff;
+}
+
+#flight {
+	background: #A2C2F9;
+}
