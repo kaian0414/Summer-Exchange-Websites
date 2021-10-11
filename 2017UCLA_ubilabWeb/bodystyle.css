@@ -1,0 +1,79 @@
+/*
+Aug 2017
+Version: 1.0
+*/
+
+/* 通用樣式 */
+
+body {/* this is the whole page body */
+	padding:10px;
+	background:write;
+	background-size:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;/* Sets default font size to 12px */
+	color:#222222;/* body字體,黑色 */
+	}
+
+img {
+	margin:10px;
+	height:60S%;
+	width:60%;
+	display:block;
+	margin:auto;
+	}
+table {
+	width:100%;
+	}
+p {/* act as the cotent of the page */
+	font-size:1.2em;
+	/* color默認黑色 */
+	}
+a {
+	text-decoration:none;
+	}
+a:hover {
+	background:lightgrey;
+	color:blue;
+	text-decoration:none;
+	}
+font {/* act as a topic of the page */
+	font-size:1.5em;
+	font-family:"Comic Sans MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:blue;
+	}
+small {
+	color:grey;
+	}
+table {
+	width:100%;
+	border:2px;
+	}
+
+/* button */
+.button {
+	background:lightblue;
+	font-family: "Comic Sans MS";
+	color: black;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+	float:left;
+	margin:2px;
+	width:170px;
+	height:auto;
+}
+
+/* Sidebar */
+
+#sidebar ul {
+	float:left;
+	list-style-type:none;
+	}
+#sidebar li {
+	font-size:1.3em;
+	}
+#sidebar li a {
+	
+	}

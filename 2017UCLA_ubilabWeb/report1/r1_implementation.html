@@ -1,0 +1,24 @@
+<!--r1_implementation.html-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>2017research_Report1.2</title>
+	<link rel="stylesheet" href="report1style.css" type="text/css" media="screen" />
+	<!--reportstyle.css is only for the report content-->
+</head>
+<body>
+	<font>2. Implementation</font>
+	<p>In this chapter, we will show our system implementation by the architecture and function.</p>
+	<font>2.1 Client</font>
+	<p>A textbox is designed on the top of the screen to make judgement of user enter single chat room or broadcast and we also design a message textbox on the bottom of the screen to provide user type message.</p>
+	<p>A single chat function is used to send and receive a message to the specific user and broadcast is used to send and receive message to all users. A user can enter single chat room or broadcast after create a userID. If userID is typed into textbox and it can be found in the server, user will enter into single chat room automatically. On the other hand, if any userID cannot be found in the textbox or server, user will enter into broadcast automatically.</p>
+	<font>2.2 Server</font>
+	<p>Our server focuses on delivering messages from clients. Dependent on sender and receiver (id and to), the server will have different reaction. For example, if receiver is empty, the message will be send to all terminal connected to the server. As a simple chat application, we select to use a stream connection between server and client instead of building up both client and server on each terminal.</p>
+	<p>Since time is limited and we prefer to accomplish existing components like UI and server function, we did not set up a database for our server. Instead, we simply create a map and a set to store features of clients.</p>
+	<p>Because of our server does not know the IP address. To solve this problem, we design a start page to let a user create a userID, once the user clicks the create button, a userID and the IP address will be sent to the server. A userID and IP address will become a key and value stored in a map or set.</p>
+	<font>2.3 Message Display</font>
+	<p>In order to classify the send messages and received message. We use Boolean to distinguish the message is sent or received. Then, we draw the chat bubble by using XML to display the message. A chat bubble is designed with two different colors. In addition, sent message and received message is designed to display in two different sides.</p>
+	<p>We create a java class to make chat bubble for any sent and receiver message. When it called by the sent message, it will return an orange chat bubble and show the message on the right hand side. Otherwise, it will return an blue chat bubble and show the message on the left hand side.</p>
+</body>
+</html>

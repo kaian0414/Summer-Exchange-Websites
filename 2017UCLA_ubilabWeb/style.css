@@ -1,0 +1,76 @@
+/* style.css */
+/*
+Aug 2017
+Version: 1.0
+*/
+
+/* 通用樣式 */
+
+body {/* this is the whole page body */
+	background:url(images/bgbg.jpg) no-repeat;
+	background-size:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:75%;/* Sets default font size to 12px */
+	color:#222222;/* body字體,黑色 */
+	}
+img {
+	margin:10px;
+	height:50%;
+	width:50%;
+	}
+p {/* act as the cotent of the page */
+	font-size:1.2em;
+	/* color默認黑色 */
+	}
+a {
+	text-decoration:none;
+	}
+font {/* act as a topic of the page */
+	font-size:1.5em;
+	font-family:"Comic Sans MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:blue;
+	}
+
+/* Structure */
+
+#wrapper {
+	margin:auto;/* 設定版面置中 */
+	width:1000px;
+	font-size:1.20em;
+	}
+#header {
+	height:155px;
+	background:url(images/MPI_logo2.png) no-repeat center;
+	}
+#menu {
+	padding:0px;
+	height:50px;
+	line-height:50px;
+	background:url(images/bg-menu.png) repeat-x;
+	}
+#mainbody {
+	padding:10px;
+	clear:both;
+	background:url(images/bg-mainbody.jpg) repeat-x;
+	}
+#footer {
+	clear:both;
+	height:20px;
+	}
+
+/* Menu */
+
+#menu ul {
+	list-style-type:none;
+	}
+#menu li {
+	float:left;/* buttons向左靠 */
+	font-family:"Segoe Script", Arial;
+	font-weight:bold;
+	}
+#menu li a {
+	font-size:140%;
+	color:white;/* menu文字顏色 */
+	margin-right:2px;/* menu選項間距 */
+	}
